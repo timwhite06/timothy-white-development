@@ -1,11 +1,8 @@
 import { Montserrat } from 'next/font/google';
 import './globals.css';
-import Header from '@/components/Header/header';
-import Footer from '@/components/Footer/footer';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import Script from 'next/script';
-import Manager from '@/components/ClientStoreManager/manager';
 import { Suspense } from 'react';
 import Loading from './loading';
 
@@ -54,14 +51,13 @@ export default function RootLayout({ children }) {
         <Analytics />
         <SpeedInsights />
         <Suspense fallback={<Loading />}>
-          <Manager />
           <div className="w-full h-full flex flex-col relative">
-            <Header />
+            {/* <Header /> */}
             <main className="max-w-[1800px] w-full ml-auto mr-auto relative flex-grow mt-[80px]">
               <div className="w-full flex-grow min-h-screen">{children}</div>
             </main>
             <footer className="w-full flex justify-center bg-[#111111] mt-auto">
-              <Footer />
+              {/* <Footer /> */}
             </footer>
           </div>
         </Suspense>
