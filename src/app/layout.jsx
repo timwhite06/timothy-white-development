@@ -5,6 +5,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import Script from 'next/script';
 import { Suspense } from 'react';
 import Loading from './loading';
+import Header from '@/app/components/Header';
 
 const font = Montserrat({
   subsets: ['latin'],
@@ -52,8 +53,8 @@ export default function RootLayout({ children }) {
         <SpeedInsights />
         <Suspense fallback={<Loading />}>
           <div className="w-full h-full flex flex-col relative">
-            {/* <Header /> */}
-            <main className="max-w-[1800px] w-full ml-auto mr-auto relative flex-grow mt-[80px]">
+            <Header />
+            <main className="max-w-full w-full ml-auto mr-auto relative flex-grow mt-[80px]">
               <div className="w-full flex-grow min-h-screen">{children}</div>
             </main>
             <footer className="w-full flex justify-center bg-[#111111] mt-auto">
