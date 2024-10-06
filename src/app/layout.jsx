@@ -6,6 +6,7 @@ import Script from 'next/script';
 import { Suspense } from 'react';
 import Loading from './loading';
 import Header from '@/app/components/Header';
+import Footer from '@/app/components/Footer';
 
 const font = Montserrat({
   subsets: ['latin'],
@@ -57,8 +58,8 @@ export default function RootLayout({ children }) {
             <main className="max-w-full w-full ml-auto mr-auto relative flex-grow mt-[80px]">
               <div className="w-full flex-grow min-h-screen">{children}</div>
             </main>
-            <footer className="w-full flex justify-center bg-[#111111] mt-auto">
-              {/* <Footer /> */}
+            <footer className="w-full flex justify-center">
+              <Footer />
             </footer>
           </div>
         </Suspense>

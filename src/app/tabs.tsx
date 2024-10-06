@@ -1,4 +1,4 @@
 export const tabs = [
-  { name: 'Home', route: '/', subTabs: [] },
-  { name: 'About', route: '/pages/about', subTabs: [] }
+  { name: 'Home', route: '/', subTabs: [] }
+  // { name: 'Showcase', route: '/pages/showcase', subTabs: [] }
 ];

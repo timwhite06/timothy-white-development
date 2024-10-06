@@ -1,10 +1,6 @@
 const urlList = [
   { name: 'Home', route: '/' },
-  { name: 'Pricing', route: '/pages/pricing' },
-  { name: 'Contact', route: '/pages/contact' },
-  { name: 'About', route: '/pages/about' },
-  { name: 'Terms', route: '/pages/policies/privacy-policy' },
-  { name: 'Terms', route: '/pages/policies/terms-of-service' }
+  { name: 'Showcase', route: '/pages/showcase' }
 ];
 
 export default async function sitemap() {
