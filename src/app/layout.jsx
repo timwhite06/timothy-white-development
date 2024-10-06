@@ -6,6 +6,7 @@ import Script from 'next/script';
 import { Suspense } from 'react';
 import Loading from './loading';
 import Header from '@/app/components/Header';
+import Footer from '@/app/components/Footer';
 
 const font = Montserrat({
   subsets: ['latin'],
@@ -13,30 +14,30 @@ const font = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://company-url.com'),
+  metadataBase: new URL('https://timothywhitedevelopment.com'),
   title: {
-    default: 'Company Name',
-    template: '%s | Company Name'
+    default: 'Timothy White',
+    template: '%s | Timothy White'
   },
-  description: 'Company slogan',
+  description: 'A Personal Portfolio.',
   openGraph: {
     type: 'website',
     url: 'https://timothywhitedevelopment.com',
-    title: 'Company Name',
-    description: 'Company slogan',
+    title: 'Timothy White',
+    description: 'A Personal Portfolio.',
     images: '/images/logo.png',
-    site_name: 'Company Name',
+    site_name: 'Timothy White',
     keywords:
-      'Company Name, tim white web development, Company Name website development, tim white website development, website design, web developer, website development services, web development agency, professional web developer'
+      'Timothy White, tim white web development, Timothy White website development, tim white website development, website design, timothy white portfolio, timothy white web developer, timothy white web designer'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Company Name',
-    description: 'Company slogan',
+    title: 'Timothy White',
+    description: 'A Personal Portfolio.',
     images: '/images/logo.png'
   },
   keywords:
-    'Company Name, tim white web development, Company Name website development, tim white website development, website design, web developer, website development services, web development agency, professional web developer'
+    'Timothy White, tim white web development, Timothy White website development, tim white website development, website design, web developer, website development services, web development agency, professional web developer'
 };
 
 export default function RootLayout({ children }) {
@@ -57,8 +58,8 @@ export default function RootLayout({ children }) {
             <main className="max-w-full w-full ml-auto mr-auto relative flex-grow mt-[80px]">
               <div className="w-full flex-grow min-h-screen">{children}</div>
             </main>
-            <footer className="w-full flex justify-center bg-[#111111] mt-auto">
-              {/* <Footer /> */}
+            <footer className="w-full flex justify-center">
+              <Footer />
             </footer>
           </div>
         </Suspense>

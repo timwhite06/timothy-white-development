@@ -2,9 +2,7 @@ import { MetadataRoute } from 'next';
 
 const urlList = [
   { name: 'Home', route: '/' },
-  { name: 'About', route: '/pages/about' },
-  { name: 'Terms', route: '/pages/policies/privacy-policy' },
-  { name: 'Terms', route: '/pages/policies/terms-of-service' }
+  { name: 'Showcase', route: '/pages/showcase' }
 ];
 
 export default function robots(): MetadataRoute.Robots {

@@ -7,11 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
-      screens: {
-        websiteMaxWidth: '1800px'
+      colors: {
+        primary: { DEFAULT: '#22d3ee' }
       },
-      animation: {
-        'infinite-scroll': 'infinite-scroll 25s linear infinite'
+      badge: {
+        primary: { DEFAULT: '#22d3ee' }
       },
       keyframes: {
         'infinite-scroll': {
