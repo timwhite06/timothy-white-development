@@ -8,6 +8,7 @@ import {
 } from '@/app/components/Icons/index';
 import ProjectCard from './components/Cards/project_card';
 import Link from 'next/link';
+import Image from 'next/image';
 
 // List of all projects
 // List of all projects
@@ -114,12 +115,13 @@ export default function Home() {
 
           {/* Circle Section */}
           <div className="w-full md:w-1/3 flex justify-center md:justify-end mt-8 md:mt-0">
-            <div className="w-[500px] h-[500px] bg-black rounded-sm overflow-hidden flex items-center justify-center">
-              {/* Placeholder for profile picture or decorative element */}
-              <img
-                src="/images/profile_picture.jpg"
-                alt="Profile"
-                className="w-full h-full object-cover rounded-full"
+            <div className="w-[500px] h-[500px] bg-black rounded-sm overflow-hidden flex items-center justify-center relative">
+              <Image
+                src="/images/tim.JPG"
+                alt="Profile picture - Timothy White"
+                fill // Use fill without layout
+                style={{ objectFit: 'cover' }} // Update objectFit to be inline style
+                sizes="100%"
               />
             </div>
           </div>
@@ -206,6 +208,7 @@ export default function Home() {
               title="React.js"
               experience="3"
               icon="fa-brands fa-react"
+              link="https://reactjs.org"
             >
               Proficient in developing dynamic, responsive web applications
               using React.js, focusing on performance and user experience.
@@ -215,12 +218,18 @@ export default function Home() {
               title="Node.js"
               experience="3"
               icon="fa-brands fa-node-js"
+              link="https://nodejs.org"
             >
               Skilled in building server-side applications with Node.js,
               enabling efficient and scalable backend services.
             </SkillCard>
 
-            <SkillCard title="Python" experience="3" icon="fa-brands fa-python">
+            <SkillCard
+              title="Python"
+              experience="3"
+              icon="fa-brands fa-python"
+              link="https://www.python.org"
+            >
               Experience in Python programming for various applications, from
               web development to automation and data analysis.
             </SkillCard>
@@ -229,34 +238,60 @@ export default function Home() {
               title="Electron.js"
               experience="3"
               icon="fa-brands fa-js-square"
+              link="https://www.electronjs.org"
             >
               Expertise in creating cross-platform desktop applications with
               Electron.js, integrating web technologies into desktop apps.
             </SkillCard>
 
-            <SkillCard title="MongoDB" experience="2" icon={<MongodbIcon />}>
+            <SkillCard
+              title="MongoDB"
+              experience="2"
+              icon={<MongodbIcon />}
+              link="https://www.mongodb.com"
+            >
               Proficient in using MongoDB, a NoSQL database, for developing
               scalable and flexible database solutions.
             </SkillCard>
 
-            <SkillCard title="AWS" experience="2" icon="fa-brands fa-aws">
+            <SkillCard
+              title="AWS"
+              experience="2"
+              icon="fa-brands fa-aws"
+              link="https://aws.amazon.com"
+            >
               Familiar with Amazon Web Services (AWS), leveraging cloud
               infrastructure for hosting, storage, and deployment solutions.
             </SkillCard>
 
-            <SkillCard title="Next.js" experience="3" icon={<NextJsIcon />}>
+            <SkillCard
+              title="Next.js"
+              experience="3"
+              icon={<NextJsIcon />}
+              link="https://nextjs.org"
+            >
               Experienced in building server-side rendered applications and
               static websites with Next.js, focusing on performance and SEO.
             </SkillCard>
 
-            <SkillCard title="Three.js" experience="3" icon={<ThreeJsIcon />}>
+            <SkillCard
+              title="Three.js"
+              experience="3"
+              icon={<ThreeJsIcon />}
+              link="https://threejs.org"
+            >
               Proficient in creating 3D graphics and animations using Three.js,
               enabling immersive and interactive web experiences.
             </SkillCard>
 
             {/* Center the last card */}
             <div className="md:col-span-2 xl:col-span-1 justify-self-center">
-              <SkillCard title="PHP" experience="1" icon="fa-brands fa-php">
+              <SkillCard
+                title="PHP"
+                experience="1"
+                icon="fa-brands fa-php"
+                link="https://www.php.net"
+              >
                 Skilled in PHP for server-side scripting, enabling dynamic web
                 content and robust backend solutions.
               </SkillCard>
