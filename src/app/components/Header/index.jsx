@@ -33,23 +33,34 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <nav className="flex items-center justify-between">
           {/* Logo */}
-          <div className="text-white text-2xl font-bold">Timothy White</div>
+          <Link href={'/'}>
+            <div className="text-white text-2xl font-bold">Timothy White</div>
+          </Link>
 
           {/* Navigation Links for Desktop */}
-          <ul className="hidden md:flex space-x-8 text-white text-lg">
+          <ul className="hidden md:flex items-center space-x-3 text-lg">
             {tabs.map((tab, i) => (
               <li key={`${tab.name}_${i}`}>
                 <Link href={tab.route}>
                   <div
-                    className={`hover:text-cyan-400 ${
-                      pathname === tab.route ? 'text-cyan-400' : ''
-                    }`}
+                    className={`btn btn-ghost ${pathname === tab.route ? 'bg-cyan-400 text-black' : 'text-white'} hover:text-black hover:bg-cyan-400`}
                   >
                     {tab.name}
                   </div>
                 </Link>
               </li>
             ))}
+            {/* GitHub Icon Link */}
+            <li>
+              <Link
+                href="https://github.com/timwhite06"
+                className="hover:text-gray-400"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fab fa-github text-white text-xl"></i>
+              </Link>
+            </li>
           </ul>
 
           {/* Mobile Side Menu Button */}

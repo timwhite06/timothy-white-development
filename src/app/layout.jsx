@@ -28,7 +28,7 @@ export const metadata = {
     images: '/images/logo.png',
     site_name: 'Timothy White',
     keywords:
-      'Timothy White, tim white web development, Timothy White website development, tim white website development, website design, timothy white portfolio, timothy white web developer, timothy white web designer'
+      'Timothy White, timothy white development, tim white web development, Timothy White website development, tim white website development, website design, timothy white portfolio, timothy white web developer, timothy white web designer'
   },
   twitter: {
     card: 'summary_large_image',

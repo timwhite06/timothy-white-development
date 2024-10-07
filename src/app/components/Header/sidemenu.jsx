@@ -50,6 +50,21 @@ const SideMenu = ({ tabs, pathname }) => {
               {t.name}
             </Link>
           ))}
+
+          {/* GitHub Icon at the bottom */}
+          <div
+            className=" 
+          mt-auto mb-[150px]"
+          >
+            <Link
+              href="https://github.com/timwhite06"
+              className="hover:text-gray-400"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-github text-white text-3xl"></i>
+            </Link>
+          </div>
         </nav>
       </div>
     </div>
