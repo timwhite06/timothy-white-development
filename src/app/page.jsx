@@ -94,15 +94,17 @@ export default function Home() {
               Timothy White | Brighton, UK
             </h3>
             <p className="text-lg sm:text-xl mb-4 leading-relaxed">
-              Hi, I’m Timothy White, a passionate full-stack developer with
-              experience in building innovative web and desktop applications.
-              With a strong background in AWS, React.js, Node.js, and Python, I
-              specialize in creating full-stack solutions for drone calibration,
-              automotive technology, and more. I’m also an instructor in the
-              Army Cadets, helping young people develop their skills and
-              confidence. Outside of work, you’ll often find me pursuing my love
-              for bodybuilding and continuously working on personal development
-              projects.
+              <p className="text-lg sm:text-xl mb-4 leading-relaxed">
+                {' '}
+                Hi, I&apos;m Timothy White, a full-stack developer specialising
+                in full-stack web solutions. I have developed various
+                applications, including those for drone, automotive, and camera
+                calibration systems.{' '}
+              </p>{' '}
+              I’m also an instructor in the Army Cadets, helping young people
+              develop their skills and confidence. Outside of work, you’ll often
+              find me pursuing my love for bodybuilding and continuously working
+              on personal development projects.
             </p>
             <p className="text-lg sm:text-xl leading-relaxed">
               I’m always eager to take on new challenges and explore
@@ -164,13 +166,14 @@ export default function Home() {
               {/* Second Paragraph */}
               <p className="text-lg sm:text-xl mb-4 leading-relaxed">
                 At Continental Engineering Services, I have been deeply involved
-                in developing full-stack 3D automotive simulations using modern
-                technologies like <strong>React.js</strong>,{' '}
-                <strong>Node.js</strong>, <strong>Three.js</strong>,{' '}
-                <strong>Electron.js</strong>, and <strong>Python</strong>. These
-                simulations help automotive engineers test and optimise vehicle
-                components in a virtual environment, reducing physical testing
-                and accelerating the design process.
+                in developing full-stack <strong>3D</strong> automotive
+                simulations using modern technologies like{' '}
+                <strong>React.js</strong>, <strong>Node.js</strong>,{' '}
+                <strong>Three.js</strong>, <strong>Electron.js</strong>, and{' '}
+                <strong>Python</strong>. These simulations help automotive
+                engineers test and optimise vehicle components in a virtual
+                environment, reducing physical testing and accelerating the
+                design process.
               </p>
 
               {/* Third Paragraph */}
@@ -370,17 +373,21 @@ export default function Home() {
             {/* University Degree */}
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-2xl sm:text-3xl font-bold mb-2">
-                BSc (Hons) Digital and Technology Solutions (Software
-                Engineering)
+                University
               </h3>
               <p className="text-md sm:text-lg text-gray-700 mb-2">
                 University of Chichester | September 2021 - Expected Graduation:
                 July 2025
               </p>
               <p className="text-lg sm:text-xl mb-4">
-                Currently pursuing a 2:1 in Software Engineering, I am in my
-                final year of study, attending university 1 day a week while
-                working on personal and professional development projects.
+                Currently, I am pursuing a 2:1 in{' '}
+                <strong>
+                  BSc (Hons) Digital and Technology Solutions (Software
+                  Engineering)
+                </strong>
+                . I am in my final year of study, attending university 1 day a
+                week while working on personal and professional development
+                projects.
               </p>
               <p className="text-lg sm:text-xl font-semibold">
                 Relevant Modules:
@@ -391,7 +398,48 @@ export default function Home() {
                 <li>Web User Experience</li>
                 <li>Python</li>
                 <li>Java</li>
-                <li>PHP and Database</li>
+                <li>PHP and an SQL Database using PHPMyAdmin</li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-2">
+                College - Sixth Form
+              </h3>
+              <p className="text-md sm:text-lg text-gray-700 mb-2">
+                St Paul&apos;s Catholic College | September 2019 - July 2021
+              </p>
+              <p className="text-lg sm:text-xl mb-4">
+                I studied an A Level in Computer Science & a double BTEC in
+                Business.
+              </p>
+              <p className="text-lg sm:text-xl font-semibold">Grades:</p>
+              <ul className="list-disc list-inside text-lg sm:text-xl leading-relaxed">
+                <li>Computer Science: A</li>
+                <li>Double BTEC Business: D* D*</li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-2">GCSEs</h3>
+              <p className="text-md sm:text-lg text-gray-700 mb-2">
+                Warden Park Academy | September 2014 - July 2019
+              </p>
+              <p className="text-lg sm:text-xl mb-4">
+                I studied an A Level in Computer Science & a double BTEC in
+                Business.
+              </p>
+              <p className="text-lg sm:text-xl font-semibold">Grades:</p>
+              <ul className="list-disc list-inside text-lg sm:text-xl leading-relaxed">
+                <li>Product Design: 7</li>
+                <li>Computer Science: 6</li>
+                <li>Maths: 6</li>
+                <li>History: 6</li>
+                <li>English Language: 6</li>
+                <li>English Literature: 5</li>
+                <li>Chemistry: 5</li>
+                <li>Physics: 5</li>
+                <li>Biology: 5</li>
               </ul>
             </div>
 
