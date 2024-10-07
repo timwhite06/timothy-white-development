@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 const MaxWidthWrapper = ({ bgColor, children }) => {
   return (
     <section className={`p-8 sm:p-20 ${bgColor}`}>
-      <div className="max-w-7xl mx-auto">{children}</div>
+      <div className="max-w-5xl xl:max-w-7xl mx-auto">{children}</div>
     </section>
   );
 };
