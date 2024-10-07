@@ -45,6 +45,12 @@ const projects = [
 ];
 
 export default function Home() {
+  const cloudfrontDomain = process.env.CLOUDFRONT_DOMAIN;
+  const fileName = 'stock-videos/combined_forest.mp4';
+
+  // Construct the CloudFront URL
+  const videoUrl = `https://${cloudfrontDomain}/${fileName}`;
+
   return (
     <div className="flex flex-col mt-[-80px]">
       {/* Video Background */}
@@ -52,7 +58,11 @@ export default function Home() {
         {/* Background Video */}
         <div className="video-container relative w-full h-full min-h-[85vh] flex justify-start items-center pointer-events-none">
           {/* Video Component */}
-          <VideoComponent src="/videos/combined_forest.mp4" type="video/mp4" />
+          {videoUrl ? (
+            <VideoComponent src={videoUrl} type="video/mp4" />
+          ) : (
+            <p className="text-red-500">Error loading video</p>
+          )}
 
           {/* Dark Overlay */}
           {/* Directly apply opacity to this element */}
