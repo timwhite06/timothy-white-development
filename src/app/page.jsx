@@ -460,10 +460,6 @@ export default function Home() {
               <p className="text-md sm:text-lg text-gray-700 mb-2">
                 Warden Park Academy | September 2014 - July 2019
               </p>
-              <p className="text-lg sm:text-xl mb-4">
-                I studied an A Level in Computer Science & a double BTEC in
-                Business.
-              </p>
               <p className="text-lg sm:text-xl font-semibold">Grades:</p>
               <ul className="list-disc list-inside text-lg sm:text-xl leading-relaxed">
                 <li>Product Design: 7</li>
