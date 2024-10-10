@@ -32,17 +32,17 @@ const projects = [
     link: 'https://github.com/timwhite06/youtube-video-audio-downloader',
     bgColor: 'bg-gray-100',
     icon: 'fa-brands fa-python'
-  },
-  {
-    key: 'white-obsidian',
-    title: 'White Obsidian',
-    description:
-      'White Obsidian is my sole proprietorship business, offering web development and website services.',
-    image: '/images/code.jpg', // Make sure to replace this with the actual image path
-    link: 'https://whiteobsidian.com',
-    bgColor: 'bg-gray-100',
-    icon: <NextJsIcon /> // Replace with the appropriate icon if you have one
   }
+  // {
+  //   key: 'white-obsidian',
+  //   title: 'White Obsidian',
+  //   description:
+  //     'White Obsidian is my sole proprietorship business, offering web development and website services.',
+  //   image: '/images/code.jpg', // Make sure to replace this with the actual image path
+  //   link: 'https://whiteobsidian.com',
+  //   bgColor: 'bg-gray-100',
+  //   icon: <NextJsIcon /> // Replace with the appropriate icon if you have one
+  // }
 ];
 
 export default function Home() {
