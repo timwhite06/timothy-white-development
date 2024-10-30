@@ -19,7 +19,7 @@ export default function LandingImage() {
 
       <main className="p-8 sm:p-20 text-white z-10">
         <h1 className="text-5xl sm:text-7xl font-bold">Timothy White</h1>
-        <p className="mt-4 text-2xl sm:text-4xl">A Personal Portfolio.</p>
+        <div className="mt-4 text-2xl sm:text-4xl">A Personal Portfolio.</div>
       </main>
     </div>
   );
