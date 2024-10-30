@@ -38,7 +38,7 @@ const projects = [
     key: 'weather-app',
     title: 'Weather App',
     description:
-      'Uses Visual Crossings free weather API to display the current weather for a given location.',
+      'Uses Visual Crossings free weather API to display the current weather for a given location. Uses NX for monorepo, Next JS, and TypeScript.',
     image: '/images/weatherlightning.jpg',
     link: 'https://weather-app-2-kappa-silk.vercel.app/',
     bgColor: 'bg-gray-100',
