@@ -9,6 +9,7 @@ import {
 import ProjectCard from './components/Cards/project_card';
 import Link from 'next/link';
 import Image from 'next/image';
+import { SiNx } from 'react-icons/si';
 
 // List of all projects
 // List of all projects
@@ -32,6 +33,20 @@ const projects = [
     link: 'https://github.com/timwhite06/youtube-video-audio-downloader',
     bgColor: 'bg-gray-100',
     icon: 'fa-brands fa-python'
+  },
+  {
+    key: 'weather-app',
+    title: 'Weather App',
+    description:
+      'Uses Visual Crossings free weather API to display the current weather for a given location. Uses NX for monorepo, Next JS, and TypeScript.',
+    image: '/images/weatherlightning.jpg',
+    link: 'https://weather-app-2-kappa-silk.vercel.app/',
+    bgColor: 'bg-gray-100',
+    icon: (
+      <div className="text-5xl">
+        <SiNx />
+      </div>
+    )
   }
   // {
   //   key: 'white-obsidian',
@@ -55,9 +70,9 @@ export default function Home() {
   return (
     <div className="flex flex-col mt-[-80px]">
       {/* Video Background */}
-      <div className="min-h-[85vh] flex items-center relative w-full">
+      <div className="min-h-screen flex items-center relative w-full">
         {/* Background Video */}
-        <div className="video-container relative w-full h-full min-h-[85vh] flex justify-start items-center pointer-events-none">
+        <div className="video-container relative w-full h-full min-h-screen flex justify-start items-center pointer-events-none">
           {/* Video Component */}
           {videoUrl ? (
             <VideoComponent src={videoUrl} type="video/mp4" />
@@ -95,13 +110,13 @@ export default function Home() {
               Timothy White | Brighton, UK
             </h3>
             <p className="text-lg sm:text-xl mb-4 leading-relaxed">
-              <p className="text-lg sm:text-xl mb-4 leading-relaxed">
-                {' '}
-                Hi, I&apos;m Timothy White, a full-stack developer specialising
-                in full-stack web solutions. I have developed various
-                applications, including those for drone, automotive, and camera
-                calibration systems.{' '}
-              </p>{' '}
+              {' '}
+              Hi, I&apos;m Timothy White, a full-stack developer specialising in
+              full-stack web solutions. I have developed various applications,
+              including those for drone, automotive, and camera calibration
+              systems.{' '}
+            </p>{' '}
+            <p className="text-lg sm:text-xl mb-4 leading-relaxed">
               I’m also an instructor in the Army Cadets, helping young people
               develop their skills and confidence. Outside of work, you’ll often
               find me pursuing my love for bodybuilding and continuously working
