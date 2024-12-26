@@ -10,6 +10,7 @@ import ProjectCard from './components/Cards/project_card';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SiNx } from 'react-icons/si';
+import { generateSignedUrl } from '@/utils/generate_signed_url';
 
 // List of all projects
 // List of all projects
@@ -48,24 +49,10 @@ const projects = [
       </div>
     )
   }
-  // {
-  //   key: 'white-obsidian',
-  //   title: 'White Obsidian',
-  //   description:
-  //     'White Obsidian is my sole proprietorship business, offering web development and website services.',
-  //   image: '/images/code.jpg', // Make sure to replace this with the actual image path
-  //   link: 'https://whiteobsidian.com',
-  //   bgColor: 'bg-gray-100',
-  //   icon: <NextJsIcon /> // Replace with the appropriate icon if you have one
-  // }
 ];
 
 export default function Home() {
-  const cloudfrontDomain = process.env.CLOUDFRONT_DOMAIN;
-  const fileName = 'stock-videos/combined_forest.mp4';
-
-  // Construct the CloudFront URL
-  const videoUrl = `https://${cloudfrontDomain}/${fileName}`;
+  const signedVideoUrl = generateSignedUrl();
 
   return (
     <div className="flex flex-col mt-[-80px]">
@@ -74,8 +61,8 @@ export default function Home() {
         {/* Background Video */}
         <div className="video-container relative w-full h-full min-h-screen flex justify-start items-center pointer-events-none">
           {/* Video Component */}
-          {videoUrl ? (
-            <VideoComponent src={videoUrl} type="video/mp4" />
+          {signedVideoUrl ? (
+            <VideoComponent src={signedVideoUrl} type="video/mp4" />
           ) : (
             <p className="text-red-500">Error loading video</p>
           )}
@@ -221,7 +208,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
             <SkillCard
               title="React.js"
-              experience="3"
+              experienceStartYear={2021}
               icon="fa-brands fa-react"
               link="https://reactjs.org"
             >
@@ -231,7 +218,7 @@ export default function Home() {
 
             <SkillCard
               title="Node.js"
-              experience="3"
+              experienceStartYear={2021}
               icon="fa-brands fa-node-js"
               link="https://nodejs.org"
             >
@@ -241,7 +228,7 @@ export default function Home() {
 
             <SkillCard
               title="Python"
-              experience="3"
+              experienceStartYear={2021}
               icon="fa-brands fa-python"
               link="https://www.python.org"
             >
@@ -251,7 +238,7 @@ export default function Home() {
 
             <SkillCard
               title="Electron.js"
-              experience="3"
+              experienceStartYear={2021}
               icon="fa-brands fa-js-square"
               link="https://www.electronjs.org"
             >
@@ -261,7 +248,7 @@ export default function Home() {
 
             <SkillCard
               title="MongoDB"
-              experience="2"
+              experienceStartYear={2022}
               icon={<MongodbIcon />}
               link="https://www.mongodb.com"
             >
@@ -271,7 +258,7 @@ export default function Home() {
 
             <SkillCard
               title="AWS"
-              experience="2"
+              experienceStartYear={2022}
               icon="fa-brands fa-aws"
               link="https://aws.amazon.com"
             >
@@ -281,7 +268,7 @@ export default function Home() {
 
             <SkillCard
               title="Next.js"
-              experience="3"
+              experienceStartYear={2021}
               icon={<NextJsIcon />}
               link="https://nextjs.org"
             >
@@ -291,7 +278,7 @@ export default function Home() {
 
             <SkillCard
               title="Three.js"
-              experience="3"
+              experienceStartYear={2022}
               icon={<ThreeJsIcon />}
               link="https://threejs.org"
             >
@@ -303,7 +290,8 @@ export default function Home() {
             <div className="md:col-span-2 xl:col-span-1 justify-self-center">
               <SkillCard
                 title="PHP"
-                experience="1"
+                experienceStartYear={2023}
+                experienceEndYear={2025}
                 icon="fa-brands fa-php"
                 link="https://www.php.net"
               >

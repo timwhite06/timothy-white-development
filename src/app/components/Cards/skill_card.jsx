@@ -1,8 +1,20 @@
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 
-const SkillCard = ({ title, icon, experience, children, link }) => {
+const SkillCard = ({
+  title,
+  icon,
+  experienceStartYear,
+  experienceEndYear,
+  children,
+  link
+}) => {
   const isSvg = typeof icon === 'object';
+
+  // Calculate years of experience
+  const currentYear = new Date().getFullYear();
+  const endYear = experienceEndYear || currentYear; // Use current year if no end year is provided
+  const yearsOfExperience = endYear - experienceStartYear;
 
   return (
     <Link href={link} target="_blank" rel="noopener noreferrer">
@@ -14,7 +26,7 @@ const SkillCard = ({ title, icon, experience, children, link }) => {
               className="badge text-lg p-3 mt-[-5px] border-none text-black"
               style={{ background: '#22d3ee' }}
             >
-              {experience}+ years
+              {yearsOfExperience}+ years
             </div>
           </div>
 
@@ -34,7 +46,8 @@ const SkillCard = ({ title, icon, experience, children, link }) => {
 
 SkillCard.propTypes = {
   title: PropTypes.string.isRequired,
-  experience: PropTypes.string.isRequired,
+  experienceStartYear: PropTypes.number.isRequired, // Starting year of experience
+  experienceEndYear: PropTypes.number, // Optional ending year of experience
   icon: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
   children: PropTypes.node.isRequired,
   link: PropTypes.string.isRequired
