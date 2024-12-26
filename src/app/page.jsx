@@ -10,7 +10,7 @@ import ProjectCard from './components/Cards/project_card';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SiNx } from 'react-icons/si';
-import { getSignedUrl } from '@aws-sdk/cloudfront-signer';
+import { generateSignedUrl } from '@/utils/generate_signed_url';
 
 // List of all projects
 // List of all projects
@@ -50,32 +50,6 @@ const projects = [
     )
   }
 ];
-
-export const generateSignedUrl = () => {
-  const cloudfrontDomain = process.env.CLOUDFRONT_DOMAIN;
-  const fileName = 'stock-videos/combined_forest.mp4';
-
-  // Convert your multi-line private key (with \n) from an env variable
-  const privateKey = process.env.CLOUDFRONT_PRIVATE_KEY?.replace(/\\n/g, '\n');
-
-  try {
-    // Set dateLessThan to 1 hour from now
-    const dateLessThan = new Date(Date.now() + 30 * 60 * 1000).toISOString();
-
-    // Generate a signed URL using a custom policy
-    const signedUrl = getSignedUrl({
-      url: `https://${cloudfrontDomain}/${fileName}`,
-      keyPairId: process.env.CLOUDFRONT_KEY_PAIR,
-      privateKey,
-      dateLessThan
-    });
-
-    return signedUrl;
-  } catch (error) {
-    console.error('Error generating signed URL:', error.message);
-    throw error;
-  }
-};
 
 export default function Home() {
   const signedVideoUrl = generateSignedUrl();
