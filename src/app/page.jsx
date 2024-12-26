@@ -13,7 +13,6 @@ import { SiNx } from 'react-icons/si';
 import { generateSignedUrl } from '@/utils/generate_signed_url';
 
 // List of all projects
-// List of all projects
 const projects = [
   {
     key: 'portfolio',
