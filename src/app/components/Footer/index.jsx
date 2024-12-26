@@ -8,15 +8,6 @@ const Footer = () => {
           <p>&copy; {currentYear} Timothy White. All rights reserved.</p>
           <div className="flex justify-center space-x-4 mt-3 pb-2">
             <a
-              href="https://www.instagram.com/timwhite06/?hl=en"
-              className="hover:text-gray-400 flex items-center"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-instagram mr-2"></i>
-              Instagram
-            </a>
-            <a
               href="https://github.com/timwhite06"
               className="hover:text-gray-400 flex items-center"
               target="_blank"
