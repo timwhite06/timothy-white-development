@@ -173,7 +173,7 @@ export default function Home() {
               {/* Continental Engineering Services Experience */}
               <div className="relative bg-white p-6 rounded-md shadow-md">
                 {/* Badge for Date */}
-                <span className="badge absolute left-1/2 transform -translate-x-1/2 -top-4 bg-[#22d3ee] text-black font-bold px-6 py-3 rounded-full text-large mt-1 w-[65vw] sm:w-auto">
+                <span className="badge  h-auto max-h-[40px] absolute left-1/2 transform -translate-x-1/2 -top-4 bg-[#22d3ee] text-black font-bold px-6 py-3 rounded-full text-large mt-1 w-[65vw] sm:w-auto">
                   January 2025 - Present
                 </span>
 
@@ -186,30 +186,28 @@ export default function Home() {
                 </p>
 
                 {/* First Paragraph */}
-                <p className="text-lg sm:text-xl mb-4 leading-relaxed">
-                  <ul className="text-lg sm:text-xl mb-4 leading-relaxed list-disc pl-5">
-                    <li>
-                      Building and maintaining secure frontend solutions for
-                      eCommerce based products.
-                    </li>
-                    <li>
-                      Developing e2e & component unit tests for existing
-                      solutions.
-                    </li>
-                    <li>
-                      Improving app performance & bundle sizes (opted for
-                      vanilla solutions).
-                    </li>
-                    <li>Working in a small, agile team.</li>
-                    <li>
-                      Delivered my final-year University project to Sycurio - a
-                      full-stack solution (React.js, Node.js, and PostgresSQL)
-                      hosted on their servers (included project management,
-                      gathering requirements through questionnaires, and coding
-                      the solution out of office hours).
-                    </li>
-                  </ul>
-                </p>
+                <ul className="text-lg sm:text-xl mb-4 leading-relaxed list-disc pl-5">
+                  <li>
+                    Building and maintaining secure frontend solutions for
+                    eCommerce based products.
+                  </li>
+                  <li>
+                    Developing e2e & component unit tests for existing
+                    solutions.
+                  </li>
+                  <li>
+                    Improving app performance & bundle sizes (opted for vanilla
+                    solutions).
+                  </li>
+                  <li>Working in a small, agile team.</li>
+                  <li>
+                    Delivered my final-year University project to Sycurio - a
+                    full-stack solution (React.js, Node.js, and PostgresSQL)
+                    hosted on their servers (included project management,
+                    gathering requirements through questionnaires, and coding
+                    the solution out of office hours).
+                  </li>
+                </ul>
               </div>
             </div>
 
@@ -217,7 +215,7 @@ export default function Home() {
               {/* Continental Engineering Services Experience */}
               <div className="relative bg-white p-6 rounded-md shadow-md">
                 {/* Badge for Date */}
-                <span className="badge absolute left-1/2 transform -translate-x-1/2 -top-4 bg-[#22d3ee] text-black font-bold px-6 py-3 rounded-full text-large mt-1 w-[65vw] sm:w-auto">
+                <span className="badge  h-auto max-h-[45px] absolute left-1/2 transform -translate-x-1/2 -top-4 bg-[#22d3ee] text-black font-bold px-6 py-3 rounded-full text-large mt-1 w-[65vw] sm:w-auto">
                   August 2021 - November 2024
                 </span>
 
