@@ -181,7 +181,7 @@ export default function Home() {
                 <h3 className="text-2xl sm:text-3xl font-bold mb-2 mt-4">
                   Front-End Developer - Sycurio Ltd
                 </h3>
-                <p className="text-md sm:text-lg text-gray-700 mb-2 h-auto">
+                <p className="text-md sm:text-lg text-gray-700 mb-2">
                   Hybrid - Full Time
                 </p>
 
