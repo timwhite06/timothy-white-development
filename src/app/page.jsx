@@ -10,10 +10,53 @@ import ProjectCard from './components/Cards/project_card';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SiNx } from 'react-icons/si';
+import { FaVuejs } from 'react-icons/fa';
+import { TbBrandTypescript } from 'react-icons/tb';
+import { IoLogoElectron } from 'react-icons/io5';
 import { generateSignedUrl } from '@/utils/generate_signed_url';
+import { RiJavascriptLine } from 'react-icons/ri';
+import { RiTailwindCssFill } from 'react-icons/ri';
 
 // List of all projects
 const projects = [
+  {
+    key: 'vue-js-sorting-algo-app',
+    title: 'Vue JS Sorting Algorithm Visualiser',
+    description:
+      'A sorting algorithm visualiser built using Vue.js. It allows users to visualize various sorting algorithms in action.',
+    image: '/images/sorting.png',
+    link: 'https://timwhite06-vuejs-sorting-algorithms.netlify.app/',
+    bgColor: 'bg-gray-100',
+    icon: (
+      <div className="text-5xl">
+        <FaVuejs />
+      </div>
+    )
+  },
+  {
+    key: 'weather-app',
+    title: 'Weather App',
+    description:
+      'Uses Visual Crossings free weather API to display the current weather for a given location. Uses NX for monorepo, Next JS, and TypeScript.',
+    image: '/images/weatherlightning.jpg',
+    link: 'https://weather-app-2-kappa-silk.vercel.app/',
+    bgColor: 'bg-gray-100',
+    icon: (
+      <div className="text-5xl">
+        <SiNx />
+      </div>
+    )
+  },
+  {
+    key: 'chess-game',
+    title: 'Chess Game',
+    description:
+      "A chess game built using JavaScript and Rust. Exploring Rust's websocket capabilities and database integration.",
+    image: '/images/chess.jpg',
+    link: 'https://github.com/timwhite06/chess-rust-and-javascript',
+    bgColor: 'bg-gray-100',
+    icon: 'fa-brands fa-rust'
+  },
   {
     key: 'portfolio',
     title: 'Portfolio Website',
@@ -33,20 +76,6 @@ const projects = [
     link: 'https://github.com/timwhite06/youtube-video-audio-downloader',
     bgColor: 'bg-gray-100',
     icon: 'fa-brands fa-python'
-  },
-  {
-    key: 'weather-app',
-    title: 'Weather App',
-    description:
-      'Uses Visual Crossings free weather API to display the current weather for a given location. Uses NX for monorepo, Next JS, and TypeScript.',
-    image: '/images/weatherlightning.jpg',
-    link: 'https://weather-app-2-kappa-silk.vercel.app/',
-    bgColor: 'bg-gray-100',
-    icon: (
-      <div className="text-5xl">
-        <SiNx />
-      </div>
-    )
   }
 ];
 
@@ -110,7 +139,7 @@ export default function Home() {
             </p>
             <p className="text-lg sm:text-xl leading-relaxed">
               I’m always eager to take on new challenges and explore
-              cutting-edge technologies to solve real-world problems.
+              technologies.
             </p>
           </div>
 
@@ -139,58 +168,103 @@ export default function Home() {
             professional journey.
           </p>
 
-          <div className="space-y-6">
-            {/* Continental Engineering Services Experience */}
-            <div className="relative bg-white p-6 rounded-md shadow-md">
-              {/* Badge for Date */}
-              <span className="badge absolute left-1/2 transform -translate-x-1/2 -top-4 bg-[#22d3ee] text-black font-bold px-6 py-3 rounded-full text-large mt-1 w-[65vw] sm:w-auto">
-                August 2021 - Present
-              </span>
+          <div className="grid gap-7 grid-flow-row">
+            <div className="space-y-6">
+              {/* Continental Engineering Services Experience */}
+              <div className="relative bg-white p-6 rounded-md shadow-md">
+                {/* Badge for Date */}
+                <span className="badge absolute left-1/2 transform -translate-x-1/2 -top-4 bg-[#22d3ee] text-black font-bold px-6 py-3 rounded-full text-large mt-1 w-[65vw] sm:w-auto">
+                  January 2025 - Present
+                </span>
 
-              {/* Experience Details */}
-              <h3 className="text-2xl sm:text-3xl font-bold mb-2 mt-4">
-                Software Test Engineer - Continental Engineering Services
-              </h3>
-              <p className="text-md sm:text-lg text-gray-700 mb-2">
-                Apprenticeship - Full Time
-              </p>
+                {/* Experience Details */}
+                <h3 className="text-2xl sm:text-3xl font-bold mb-2 mt-4">
+                  Front-End Developer - Sycurio Ltd
+                </h3>
+                <p className="text-md sm:text-lg text-gray-700 mb-2">
+                  Hybrid - Full Time
+                </p>
 
-              {/* First Paragraph */}
-              <p className="text-lg sm:text-xl mb-4 leading-relaxed">
-                Although my title is **Software Test Engineer**, my experience
-                has been focused on building full-stack web applications,
-                whether it&apos;s creating responsive websites or developing
-                desktop applications using <strong>Electron.js</strong>.
-                I&apos;ve had extensive experience delivering projects, in an{' '}
-                <strong>agile</strong> environment, that combine both frontend
-                and backend solutions.
-              </p>
-
-              {/* Second Paragraph */}
-              <p className="text-lg sm:text-xl mb-4 leading-relaxed">
-                At Continental Engineering Services, I have been deeply involved
-                in developing full-stack <strong>3D</strong> automotive
-                simulations using modern technologies like{' '}
-                <strong>React.js</strong>, <strong>Node.js</strong>,{' '}
-                <strong>Three.js</strong>, <strong>Electron.js</strong>, and{' '}
-                <strong>Python</strong>. These simulations help automotive
-                engineers test and optimise vehicle components in a virtual
-                environment, reducing physical testing and accelerating the
-                design process.
-              </p>
-
-              {/* Third Paragraph */}
-              <p className="text-lg sm:text-xl mb-4 leading-relaxed">
-                Additionally, I&apos;ve worked on developing{' '}
-                <strong>drone and camera calibration systems</strong> that
-                ensure high-precision data collection for automotive calibration
-                projects. These systems are used in the calibration of
-                autonomous vehicle sensors, ensuring that cameras and drones
-                accurately capture environmental data and vehicle movement.
-              </p>
+                {/* First Paragraph */}
+                <p className="text-lg sm:text-xl mb-4 leading-relaxed">
+                  <ul className="text-lg sm:text-xl mb-4 leading-relaxed list-disc pl-5">
+                    <li>
+                      Building and maintaining secure frontend solutions for
+                      eCommerce based products.
+                    </li>
+                    <li>
+                      Developing e2e & component unit tests for existing
+                      solutions.
+                    </li>
+                    <li>
+                      Improving app performance & bundle sizes (opted for
+                      vanilla solutions).
+                    </li>
+                    <li>Working in a small, agile team.</li>
+                    <li>
+                      Delivered my final-year University project to Sycurio - a
+                      full-stack solution (React.js, Node.js, and PostgresSQL)
+                      hosted on their servers (included project management,
+                      gathering requirements through questionnaires, and coding
+                      the solution out of office hours).
+                    </li>
+                  </ul>
+                </p>
+              </div>
             </div>
 
-            {/* You can add other job experience cards here */}
+            <div className="space-y-6">
+              {/* Continental Engineering Services Experience */}
+              <div className="relative bg-white p-6 rounded-md shadow-md">
+                {/* Badge for Date */}
+                <span className="badge absolute left-1/2 transform -translate-x-1/2 -top-4 bg-[#22d3ee] text-black font-bold px-6 py-3 rounded-full text-large mt-1 w-[65vw] sm:w-auto">
+                  August 2021 - November 2024
+                </span>
+
+                {/* Experience Details */}
+                <h3 className="text-2xl sm:text-3xl font-bold mb-2 mt-4">
+                  Software Test Engineer - Continental Engineering Services Ltd
+                </h3>
+                <p className="text-md sm:text-lg text-gray-700 mb-2">
+                  Apprenticeship - Full Time
+                </p>
+
+                {/* First Paragraph */}
+                <p className="text-lg sm:text-xl mb-4 leading-relaxed">
+                  Although my title is **Software Test Engineer**, my experience
+                  has been focused on building full-stack web applications,
+                  whether it&apos;s creating responsive websites or developing
+                  desktop applications using <strong>Electron.js</strong>.
+                  I&apos;ve had extensive experience delivering projects, in an{' '}
+                  <strong>agile</strong> environment, that combine both frontend
+                  and backend solutions.
+                </p>
+
+                {/* Second Paragraph */}
+                <p className="text-lg sm:text-xl mb-4 leading-relaxed">
+                  At Continental Engineering Services, I have been deeply
+                  involved in developing full-stack <strong>3D</strong>{' '}
+                  automotive simulations using modern technologies like{' '}
+                  <strong>React.js</strong>, <strong>Node.js</strong>,{' '}
+                  <strong>Three.js</strong>, <strong>Electron.js</strong>, and{' '}
+                  <strong>Python</strong>. These simulations help automotive
+                  engineers test and optimise vehicle components in a virtual
+                  environment, reducing physical testing and accelerating the
+                  design process.
+                </p>
+
+                {/* Third Paragraph */}
+                <p className="text-lg sm:text-xl mb-4 leading-relaxed">
+                  Additionally, I&apos;ve worked on developing{' '}
+                  <strong>drone and camera calibration systems</strong> that
+                  ensure high-precision data collection for automotive
+                  calibration projects. These systems are used in the
+                  calibration of autonomous vehicle sensors, ensuring that
+                  cameras and drones accurately capture environmental data and
+                  vehicle movement.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </MaxWidthWrapper>
@@ -203,8 +277,52 @@ export default function Home() {
             frontend and backend technologies.
           </p>
 
-          {/* Grid with better gap */}
+          {/* Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+            {/* Preparation for skill tree */}
+            {/* <SkillCard
+              title="Front End"
+              icon="fa-brands fa-react"
+              link="https://reactjs.org"
+            >
+              Discover my expertise in frontend development, including
+              JavaScript, TypeScript, and React.js.
+            </SkillCard>
+            <SkillCard
+              title="Backend"
+              icon="fa-brands fa-react"
+              link="https://reactjs.org"
+            >
+              Discover my expertise in backend development, including Python,
+              Node.js, and Next.js.
+            </SkillCard>
+            <SkillCard
+              title="Databases"
+              icon="fa-brands fa-react"
+              link="https://reactjs.org"
+            >
+              Discover my expertise in databases, including NoSQL and SQL.
+            </SkillCard> */}
+
+            <SkillCard
+              title="JavaScript"
+              experienceStartYear={2021}
+              icon={<RiJavascriptLine />}
+              link="https://www.javascript.com"
+            >
+              Proficient in JavaScript for building interactive web applications
+              and enhancing user experiences. Strong understanding of ES6+.
+            </SkillCard>
+
+            <SkillCard
+              title="TypeScript"
+              experienceStartYear={2021}
+              icon={<TbBrandTypescript />}
+              link="https://www.typescriptlang.org"
+            >
+              Skilled in TypeScript for building robust and maintainable web
+              applications, enhancing code quality and developer experience.
+            </SkillCard>
             <SkillCard
               title="React.js"
               experienceStartYear={2021}
@@ -214,7 +332,6 @@ export default function Home() {
               Proficient in developing dynamic, responsive web applications
               using React.js, focusing on performance and user experience.
             </SkillCard>
-
             <SkillCard
               title="Node.js"
               experienceStartYear={2021}
@@ -238,11 +355,21 @@ export default function Home() {
             <SkillCard
               title="Electron.js"
               experienceStartYear={2021}
-              icon="fa-brands fa-js-square"
+              icon={<IoLogoElectron />}
               link="https://www.electronjs.org"
             >
               Expertise in creating cross-platform desktop applications with
               Electron.js, integrating web technologies into desktop apps.
+            </SkillCard>
+            <SkillCard
+              title="Tailwind CSS"
+              experienceStartYear={2021}
+              icon={<RiTailwindCssFill />}
+              link="https://tailwindcss.com"
+            >
+              Proficient in using Tailwind CSS for building responsive and
+              modern web interfaces, focusing on utility-first design
+              principles.
             </SkillCard>
 
             <SkillCard
@@ -258,6 +385,7 @@ export default function Home() {
             <SkillCard
               title="AWS"
               experienceStartYear={2022}
+              experienceEndYear={2024}
               icon="fa-brands fa-aws"
               link="https://aws.amazon.com"
             >
@@ -302,7 +430,92 @@ export default function Home() {
         </div>
       </MaxWidthWrapper>
 
+      <MaxWidthWrapper bgColor="bg-gray-200">
+        <div className="container text-black px-0">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+            {' '}
+            What i&apos;m learning
+          </h2>
+          <p className="text-lg sm:text-xl mb-4 leading-relaxed">
+            I am currently learning and showing interest in the lnaguages below,
+            focusing on building efficient and scalable applications. I am also
+            exploring the capabilities of <strong>Vue.js</strong> for frontend
+            development.
+          </p>
+
+          {/* Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+            <SkillCard
+              title="Rust"
+              experienceStartYear={2025}
+              icon="fa-brands fa-rust"
+              link="https://github.com/timwhite06/chess-rust-and-javascript"
+            >
+              Creating a chess game using JavaScript and Rust. Exploring
+              Rust&apos;s websocket capabilities and database integration.{' '}
+              <br />
+              <b>Click to go to project.</b>
+            </SkillCard>
+            <SkillCard
+              title="Vue.js"
+              experienceStartYear={2025}
+              icon="fa-brands fa-vuejs"
+              link="https://timwhite06-vuejs-sorting-algorithms.netlify.app/"
+            >
+              This is a sorting algorithm visualiser built using Vue.js. It
+              allows users to visualize various sorting algorithms in action.
+              <br />
+              <b>Click to go to project.</b>
+            </SkillCard>{' '}
+            <SkillCard
+              title="Golang"
+              experienceStartYear={2025}
+              icon="fa-brands fa-golang"
+              link="https://go.dev/doc/"
+            >
+              Currently reading the documentation to learn the fundamentals of
+              Go programming.
+            </SkillCard>
+          </div>
+        </div>
+      </MaxWidthWrapper>
+
+      {/* Portfolio / Projects Section */}
       <MaxWidthWrapper bgColor="bg-gray-100">
+        <div className="container text-black px-0">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-6">Projects</h2>
+          <p className="text-lg sm:text-xl mb-4 leading-relaxed">
+            Here are some of the key projects I&apos;ve worked on recently.
+          </p>
+          {/* List projects with links to GitHub, live demos, etc. */}
+
+          {/* Project Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {projects.map((project, index) => (
+              <div
+                key={project.key}
+                className={`${
+                  projects.length % 2 !== 0 && index === projects.length - 1
+                    ? 'md:col-span-2'
+                    : ''
+                }`}
+              >
+                <ProjectCard
+                  title={project.title}
+                  description={project.description}
+                  image={project.image}
+                  link={project.link}
+                  bgColor={project.bgColor}
+                  icon={project.icon}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </MaxWidthWrapper>
+
+      {/* UX Design */}
+      <MaxWidthWrapper bgColor="bg-white">
         <div className="container text-black bg-gray-300 p-8 rounded-xl">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">UX Favourites</h2>
           <p className="text-lg sm:text-xl mb-4 leading-relaxed">
@@ -357,40 +570,6 @@ export default function Home() {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </MaxWidthWrapper>
-
-      {/* Portfolio / Projects Section */}
-      <MaxWidthWrapper bgColor="bg-white">
-        <div className="container text-black px-0">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-6">Projects</h2>
-          <p className="text-lg sm:text-xl mb-4 leading-relaxed">
-            Here are some of the key projects I&apos;ve worked on recently.
-          </p>
-          {/* List projects with links to GitHub, live demos, etc. */}
-
-          {/* Project Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {projects.map((project, index) => (
-              <div
-                key={project.key}
-                className={`${
-                  projects.length % 2 !== 0 && index === projects.length - 1
-                    ? 'md:col-span-2'
-                    : ''
-                }`}
-              >
-                <ProjectCard
-                  title={project.title}
-                  description={project.description}
-                  image={project.image}
-                  link={project.link}
-                  bgColor={project.bgColor}
-                  icon={project.icon}
-                />
-              </div>
-            ))}
           </div>
         </div>
       </MaxWidthWrapper>
