@@ -23,7 +23,7 @@ const projects = [
     key: 'vue-js-sorting-algo-app',
     title: 'Vue JS Sorting Algorithm Visualiser',
     description:
-      'A sorting algorithm visualiser built using Vue.js. It allows users to visualize various sorting algorithms in action.',
+      'A sorting algorithm visualiser built using Vue.js. It allows users to visualise various sorting algorithms in action.',
     image: '/images/sorting.png',
     link: 'https://timwhite06-vuejs-sorting-algorithms.netlify.app/',
     bgColor: 'bg-gray-100',
@@ -413,19 +413,16 @@ export default function Home() {
               enabling immersive and interactive web experiences.
             </SkillCard>
 
-            {/* Center the last card */}
-            <div className="md:col-span-2 xl:col-span-1 justify-self-center">
-              <SkillCard
-                title="PHP"
-                experienceStartYear={2023}
-                experienceEndYear={2025}
-                icon="fa-brands fa-php"
-                link="https://www.php.net"
-              >
-                Skilled in PHP for server-side scripting, enabling dynamic web
-                content and robust backend solutions.
-              </SkillCard>
-            </div>
+            <SkillCard
+              title="PHP"
+              experienceStartYear={2023}
+              experienceEndYear={2025}
+              icon="fa-brands fa-php"
+              link="https://www.php.net"
+            >
+              Skilled in PHP for server-side scripting, enabling dynamic web
+              content and robust backend solutions.
+            </SkillCard>
           </div>
         </div>
       </MaxWidthWrapper>
@@ -463,7 +460,7 @@ export default function Home() {
               link="https://timwhite06-vuejs-sorting-algorithms.netlify.app/"
             >
               This is a sorting algorithm visualiser built using Vue.js. It
-              allows users to visualize various sorting algorithms in action.
+              allows users to visualise various sorting algorithms in action.
               <br />
               <b>Click to go to project.</b>
             </SkillCard>{' '}
