@@ -1,6 +1,15 @@
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 
+// Function to calculate years of experience based on start and end years
+function getYearsOfExperience(startYear, endYear) {
+  const currentYear = new Date().getFullYear();
+  if (endYear) {
+    return endYear - startYear;
+  }
+  return currentYear - startYear;
+}
+
 const SkillCard = ({
   title,
   icon,
@@ -11,10 +20,11 @@ const SkillCard = ({
 }) => {
   const isSvg = typeof icon === 'object';
 
-  // Calculate years of experience
-  const currentYear = new Date().getFullYear();
-  const endYear = experienceEndYear || currentYear; // Use current year if no end year is provided
-  const yearsOfExperience = endYear - experienceStartYear;
+  const isYearValid =
+    experienceStartYear !== null && experienceStartYear !== undefined;
+  const yearsOfExperience = isYearValid
+    ? getYearsOfExperience(experienceStartYear, experienceEndYear)
+    : null;
 
   return (
     <Link href={link} target="_blank" rel="noopener noreferrer">
@@ -22,17 +32,19 @@ const SkillCard = ({
         <div className="card-body">
           <div className="flex justify-between items-center">
             <h2 className="card-title text-2xl">{title}</h2>
-            <div
-              className="badge text-lg p-3 mt-[-5px] border-none text-black"
-              style={{ background: '#22d3ee' }}
-            >
-              {yearsOfExperience}+ years
-            </div>
+            {yearsOfExperience !== null && (
+              <div
+                className="badge text-lg p-3 mt-[-5px] border-none text-black"
+                style={{ background: '#22d3ee' }}
+              >
+                {yearsOfExperience}+ years
+              </div>
+            )}
           </div>
 
           <p className="text-lg">{children}</p>
           {isSvg ? (
-            <div className="h-12 w-12 flex justify-center items-center">
+            <div className="h-12 w-12 flex justify-center items-center text-5xl">
               {icon}
             </div>
           ) : (
